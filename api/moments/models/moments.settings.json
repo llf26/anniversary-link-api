@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moments",
+  "info": {
+    "name": "Moments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "background": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "sender": {
+      "type": "email",
+      "required": true
+    },
+    "receiver": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
