@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_friends",
+  "info": {
+    "name": "UserFriends"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_id": {
+      "type": "integer"
+    },
+    "friend_id": {
+      "type": "integer"
+    }
+  }
+}

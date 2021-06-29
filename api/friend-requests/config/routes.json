@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/friend-requests",
+      "handler": "friend-requests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/friend-requests/count",
+      "handler": "friend-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/friend-requests/:id",
+      "handler": "friend-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/friend-requests",
+      "handler": "friend-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/friend-requests/:id",
+      "handler": "friend-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/friend-requests/:id",
+      "handler": "friend-requests.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/friend-requests/send",
+      "handler": "friend-requests.send",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/friend-requests/accept",
+      "handler": "friend-requests.accept",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/friend-requests/deny",
+      "handler": "friend-requests.deny",
+      "config": {
+        "policies": []
+      }
+    }    
+  ]
+}

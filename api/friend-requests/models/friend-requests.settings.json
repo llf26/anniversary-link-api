@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "friend_requests",
+  "info": {
+    "name": "FriendRequests",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sender_id": {
+      "type": "integer"
+    },
+    "receiver_id": {
+      "type": "integer"
+    }
+  }
+}

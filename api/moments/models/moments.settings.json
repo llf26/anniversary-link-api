@@ -27,13 +27,11 @@
       "required": false,
       "pluginOptions": {}
     },
-    "sender": {
-      "type": "email",
-      "required": true
+    "sender_id": {
+      "type": "integer"
     },
-    "receiver": {
-      "type": "email",
-      "required": true
+    "receiver_id": {
+      "type": "integer"
     }
   }
 }

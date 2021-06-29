@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@angular/cli": "^12.1.0",
     "knex": "0.21.18",
     "pg": "^8.6.0",
     "pg-connection-string": "^2.5.0",
