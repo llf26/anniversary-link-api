@@ -47,6 +47,22 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/moments/send",
+      "handler": "moments.send",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/moments/retrieve",
+      "handler": "moments.retrieve",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

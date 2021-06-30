@@ -114,7 +114,7 @@ module.exports = {
         `, params);
 
         ctx.send({
-            message: 'Friend request created.'
+            message: 'Friend request accepted.'
         }, 201);        
     },
 
