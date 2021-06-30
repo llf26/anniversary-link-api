@@ -42,10 +42,10 @@ module.exports = {
 
     async retrieve(ctx) {
         console.log('made it here')
-        const moments = await strapi.services['user-friends'].find({ user_id: Number(ctx.state.user.id)});
+        const moments = await strapi.services.moments.find({ receiver_id: Number(ctx.state.user.id)});
 
         if(!moments || moments?.length === 0) {
-            ctx.throw(404, "No moments found");
+            ctx.send([]);
         }
 
         ctx.send(moments);
