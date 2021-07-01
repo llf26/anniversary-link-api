@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/user-friends/retrieve",
+      "handler": "user-friends.retrieve",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

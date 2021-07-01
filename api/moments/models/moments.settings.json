@@ -32,6 +32,9 @@
     },
     "receiver_id": {
       "type": "integer"
+    },
+    "background_url": {
+      "type": "string"
     }
   }
 }

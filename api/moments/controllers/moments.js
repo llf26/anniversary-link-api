@@ -9,6 +9,7 @@ const { send } = require("../../friend-requests/controllers/friend-requests");
 
 module.exports = {
     async send(ctx) {
+        console.log(ctx.request.body);
         const knex = strapi.connections.default;
 
         console.log(JSON.stringify(strapi.services));
@@ -25,19 +26,20 @@ module.exports = {
             ctx.throw(404, "You must send either content or a background");
         }
 
-        // Create Moment(content, background, sender_id, receiver_id, ...)
-        await strapi.services.moments.create({
+        let moment = {
             created_at: new Date().toUTCString(),
             updated_at: new Date().toUTCString(),
             sender_id: Number(ctx.state.user.id),
             receiver_id: Number(ctx.request.body.receiverId),
             content: ctx.request.body.content,
-            background: null// some craZY MAGIC
-        });
+            background: ctx.request.body.background,
+            background_url: ctx.request.body.backgroundUrl
+        };
 
-        ctx.send({
-            message: 'Moment created.'
-        }, 201);
+        // Create Moment(content, background, sender_id, receiver_id, ...)
+        let returned = await strapi.services.moments.create(moment);
+
+        ctx.send(returned);
     },
 
     async retrieve(ctx) {
