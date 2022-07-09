@@ -9,14 +9,8 @@ const { send } = require("../../friend-requests/controllers/friend-requests");
 
 module.exports = {
     async send(ctx) {
-        console.log(ctx.request.body);
-        const knex = strapi.connections.default;
-
-        console.log(JSON.stringify(strapi.services));
         // Verify sender_id is friends with receiver_id
         const friend = await strapi.services['user-friends'].findOne({ user_id: ctx.state.user.id, friend_id: Number(ctx.request.body.receiverId) });
-
-        console.log(friend);
 
         if(!friend || friend?.length === 0) {
             ctx.throw(401, "You are not friends with the receiving user");
