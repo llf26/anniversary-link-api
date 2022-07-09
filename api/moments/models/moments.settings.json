@@ -35,6 +35,9 @@
     },
     "background_url": {
       "type": "string"
+    },
+    "text_color": {
+      "type": "string"
     }
   }
 }

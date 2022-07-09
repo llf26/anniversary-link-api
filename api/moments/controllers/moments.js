@@ -27,7 +27,8 @@ module.exports = {
             receiver_id: Number(ctx.request.body.receiverId),
             content: ctx.request.body.content,
             background: ctx.request.body.background,
-            background_url: ctx.request.body.backgroundUrl
+            background_url: ctx.request.body.backgroundUrl,
+            text_color: ctx.request.body.text_color
         };
 
         // Create Moment(content, background, sender_id, receiver_id, ...)
