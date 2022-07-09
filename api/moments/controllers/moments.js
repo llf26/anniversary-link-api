@@ -42,9 +42,12 @@ module.exports = {
         ctx.send(returned);
     },
 
-    async retrieve(ctx) {
-        console.log('made it here')
-        const moments = await strapi.services.moments.find({ receiver_id: Number(ctx.state.user.id)});
+    async retrieve(ctx) {        
+        const moments = await strapi.services.moments.find({ 
+            receiver_id: Number(ctx.state.user.id),
+            _limit: 10,
+            _sort: 'created_at:desc'
+        });
 
         if(!moments || moments?.length === 0) {
             ctx.send([]);
